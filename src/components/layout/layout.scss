@@ -1,0 +1,23 @@
+@import "../../style/media-query.scss";
+
+// .children-width {
+//     width: 100%;
+// }
+
+// .layout {
+//     min-height: calc(100vh - 225px);
+// }
+
+// .display-desktop {
+//     display: inline-block;
+// }
+
+@media (max-width: $desktop-breakpoint) {
+    // .children-width {
+    //     width: 100%;
+    // }
+
+    // .display-desktop {
+    //     display: none;
+    // }
+}

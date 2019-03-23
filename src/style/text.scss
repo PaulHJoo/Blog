@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/Noto-Sans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: url("../fonts/Noto-Sans/OpenSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-Light";
+    src: url("../fonts/Montserrat/Montserrat-Light.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+body * {
+    font-family: "Montserrat", sans-serif
+}
+
+.text-light {
+    font-family: "Montserrat-Light", sans-serif
+}
+
+.text-bold {
+    font-family: "Montserrat-Bold", sans-serif
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-xl {
+    font-size: 5em;
+}
+
+.text-l {
+    font-size: 3em;
+}
+
+.text-m {
+    font-size: 2.5em;
+}
+
+.text-sm {
+    font-size: 2em;
+}
+
+.text-s {
+    font-size: 1.2em;
+}
+
+.text-no-decor {
+    text-decoration: none;
+}
+
+.letter-spacing-3 {
+    letter-spacing: 0.3em;
+}

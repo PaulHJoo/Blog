@@ -1,0 +1,61 @@
+@import "./colour.scss";
+
+body {
+    background-color: #FFFFFF !important;
+    transition: 500ms color, 500ms background-color;
+}
+
+h1, h2, h3, p, a {
+    color: $dark-text-color !important;
+}
+
+.link-hover-colour:hover {
+    color: violet !important;
+    transition: 250ms color;
+}
+
+.hover-outline:hover {
+    outline: $dark-color;
+    outline-width: 2px;
+    outline-style: solid;
+    transition: 350ms;
+}
+
+.opposite-theme-background {
+    background-color: $dark-color;
+}
+
+.opposite-theme-fill {
+    fill: $dark-color;
+}
+
+.opposite-theme-hover:hover {
+    fill: #000000;
+}
+
+//Dark Theme
+body.dark {
+    background-color: $dark-color !important;
+    transition: 500ms color, 500ms background-color;
+}
+
+body.dark h1, body.dark h2, body.dark h3, body.dark p, body.dark a {
+    color: $light-color !important;
+}
+
+body.dark .link-hover-colour:hover {
+    color: $light-highlight-color !important;
+    transition: 250ms color;
+}
+
+body.dark .opposite-theme-background {
+    background-color: $light-color;
+}
+
+body.dark .opposite-theme-fill {
+    fill: $light-color;
+}
+
+body.dark .opposite-theme-hover:hover {
+    fill: $light-highlight-color;
+}

@@ -1,0 +1,30 @@
+@import "../../style/colour.scss";
+
+.mail-subscriber {
+    // background-color: #e0e0e0;
+}
+
+.mail-input {
+    background-color: transparent;
+    color: $dark-text-color;
+    border-width: 0;
+    width: 250px !important;
+    padding: 15px !important;
+}
+
+.mail-button {
+    // background-color: $dark-color;
+    // color: $light-highlight-color !important;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 1.5em;
+    padding: 5px 35px;
+}
+
+body.dark .mail-text {
+    color: #000000 !important;
+}
+
+body.dark .mail-input {
+    color: $light-color;
+}

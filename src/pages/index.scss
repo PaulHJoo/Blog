@@ -1,0 +1,19 @@
+@import "../style/media-query.scss";
+
+.content-width {
+    width: calc(100% - 310px);
+}
+
+.mail-div {
+    display: inline-block;
+}
+
+@media (max-width: $desktop-breakpoint) {
+    .content-width {
+        width: 100%;
+    }
+
+    .mail-div {
+        display: block;
+    }
+}

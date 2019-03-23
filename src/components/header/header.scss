@@ -1,0 +1,53 @@
+@import "../../style/media-query.scss";
+
+.header {
+    margin-bottom: 50px;
+}
+
+.mobile-theme-slider {
+    width: 150px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.nav-desktop {
+    display: block;
+}
+
+.nav-mobile {
+    display: none;
+    // padding-top: 25px;
+}
+
+.nav-mobile-list {
+    display: none;
+    list-style: none;
+    padding-left: 0;
+    max-height: 0;
+    overflow: hidden;
+    text-align: center;
+    margin: 0;
+    transition: 350ms cubic-bezier(.32,1.04,.93,1);;
+}
+
+.nav-mobile-list-show {
+    max-height: 250px;
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .header {
+        margin-bottom: 25px;
+    }
+
+    .nav-desktop {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+
+    .nav-mobile-list {
+        display: block;
+    }
+}
