@@ -14,7 +14,7 @@ const About = ({ data }) => {
     console.log(file);
     return (
         <Layout isPost={false}>
-            <p className="text-m text-bold margin-t-zero">
+            <p className="text-m text-light margin-t-zero">
                 About
             </p>
             <Img className="width-300 margin-l-r-auto" sizes={file.childImageSharp.sizes} />
@@ -48,7 +48,7 @@ const About = ({ data }) => {
                 <div className="display-inline-block">
                     <TwitterIcon href="https://twitter.com/PaulHJoo" size="small" />
                 </div>
-                <a href="https://twitter.com/PaulHJoo" className="display-inline-block padding-l-10 margin-zero top-negative-02em position-relative link-hover-colour text-no-decor">
+                <a href="https://twitter.com/PaulHJoo" className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
                     Twitter - @PaulHJoo
                 </a>
             </div>
@@ -56,7 +56,7 @@ const About = ({ data }) => {
                 <div className="display-inline-block">
                     <GitHubIcon href="https://github.com/PaulHJoo" size="small" />
                 </div>
-                <a href="https://github.com/PaulHJoo" className="display-inline-block padding-l-10 margin-zero top-negative-02em position-relative link-hover-colour text-no-decor">
+                <a href="https://github.com/PaulHJoo" className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
                     GitHub - PaulHJoo
                 </a>
             </div>
@@ -64,7 +64,7 @@ const About = ({ data }) => {
                 <div className="display-inline-block">
                     <LinkedInIcon href="https://www.linkedin.com/in/devpauljoo/" size="small" />
                 </div>
-                <a href="https://www.linkedin.com/in/devpauljoo/" className="display-inline-block padding-l-10 margin-zero top-negative-02em position-relative link-hover-colour text-no-decor">
+                <a href="https://www.linkedin.com/in/devpauljoo/" className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
                     LinkedIn
                 </a>
             </div>
@@ -72,7 +72,7 @@ const About = ({ data }) => {
                 <div className="display-inline-block">
                     <SquareIcon href="" size="small" />
                 </div>
-                <a className="display-inline-block padding-l-10 margin-zero top-negative-02em position-relative link-hover-colour text-no-decor">
+                <a className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
                     Profile
                 </a>
             </div>
@@ -80,7 +80,7 @@ const About = ({ data }) => {
                 <div className="display-inline-block">
                     <EmailIcon size="small" />
                 </div>
-                <p className="display-inline-block padding-l-10 margin-zero top-negative-02em position-relative">
+                <p className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative">
                     Email - dev.pauljoo@gmail.com
                 </p>
             </div>

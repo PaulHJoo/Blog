@@ -14,10 +14,8 @@ const Posts = ({ data }) => {
             <div key={node.id} className="margin-b-10">
                 <Img className="thumbnail display-inline-block" sizes={frontmatter.featureImage.childImageSharp.sizes} />
                 <div className="display-inline-block title-parent">
-                    <Link to={frontmatter.path}>
-                        <p className="text-s text-bold margin-zero title-child link-hover-colour">
-                            { frontmatter.title }
-                        </p>
+                    <Link to={frontmatter.path} className="text-s text-no-decor margin-zero title-child hover-border padding-10">
+                        {frontmatter.title}
                     </Link>
                 </div>
             </div>
@@ -26,10 +24,10 @@ const Posts = ({ data }) => {
 
     return (
         <Layout isPost={false}>
-            <p className="text-m text-bold margin-t-zero">
+            <p className="text-m text-light margin-t-zero">
                 Posts
             </p>
-            { postList }
+            {postList}
         </Layout>
     );
 }

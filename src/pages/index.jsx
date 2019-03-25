@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
       <div className="display-inline-block content-width">
         <PostList edges={edges} />
       </div>
-      <div className="float-right mail-div">
+      <div className="mail-div">
         <MailSubscriber />
       </div>
     </Layout>

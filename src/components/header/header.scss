@@ -4,6 +4,10 @@
     margin-bottom: 50px;
 }
 
+.item-margin {
+    margin-right: 50px;
+}
+
 .mobile-theme-slider {
     width: 150px;
     margin-left: auto;
@@ -16,7 +20,6 @@
 
 .nav-mobile {
     display: none;
-    // padding-top: 25px;
 }
 
 .nav-mobile-list {
@@ -32,6 +35,12 @@
 
 .nav-mobile-list-show {
     max-height: 250px;
+}
+
+@media (max-width: $desktop-breakpoint) {
+    .item-margin {
+        margin-right: 0;
+    }
 }
 
 @media (max-width: $mobile-breakpoint) {

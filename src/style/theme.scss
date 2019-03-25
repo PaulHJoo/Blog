@@ -14,10 +14,25 @@ h1, h2, h3, p, a {
     transition: 250ms color;
 }
 
-.hover-outline:hover {
-    outline: $dark-color;
-    outline-width: 2px;
-    outline-style: solid;
+.hover-border {
+    border-width: 1.5px;
+    border-style:  solid;
+    border-color: transparent;
+}
+
+.hover-border:hover {
+    border-color: $dark-color;
+    transition: 350ms;
+}
+
+.hover-bottom-border {
+    border-bottom-width: 1.5px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+}
+
+.hover-bottom-border:hover {
+    border-bottom-color: $dark-color;
     transition: 350ms;
 }
 
@@ -46,6 +61,16 @@ body.dark h1, body.dark h2, body.dark h3, body.dark p, body.dark a {
 body.dark .link-hover-colour:hover {
     color: $light-highlight-color !important;
     transition: 250ms color;
+}
+
+body.dark .hover-border:hover {
+    border-color: $light-color;
+    transition: 350ms;
+}
+
+body.dark .hover-bottom-border:hover {
+    border-bottom-color: $light-color;
+    transition: 350ms;
 }
 
 body.dark .opposite-theme-background {

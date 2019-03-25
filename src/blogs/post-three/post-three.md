@@ -3,7 +3,7 @@ identifier: "post3"
 path: "/post-three"
 date: "2019-02-27"
 displayDate: "February 27, 2019"
-title: "An Unnecessarily Long Title for Post Three"
+title: "An Unnecessarily Long Title for Post Three Like Really Unnecessary Seriously Why Haven't You Heard Of Concise Writing"
 featureImage: "./post-three-image.jpg"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lectus tincidunt, aliquam est at, molestie nibh. Pellentesque molestie sapien mattis lectus tristique, sit amet finibus sapien vulputate. Mauris condimentum erat id leo elementum placerat. Cras volutpat libero at ultrices suscipit. In sodales, dolor eget laoreet venenatis, turpis risus pellentesque ligula, non interdum elit velit eu leo. In sed nibh porta felis sodales aliquam eu eget diam."
 ---

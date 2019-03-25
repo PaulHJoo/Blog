@@ -7,18 +7,20 @@ const PostCard = ({ frontmatter }) => {
     const { sizes } = featureImage.childImageSharp;
     return (
         <div className="margin-b-50">
-            <Link to={path} className="text-no-decor">
-                <p className="text-center text-m link-hover-colour margin-t-zero margin-b-20">
-                    {title}
-                </p>
-            </Link>
+            <div className="margin-b-20 text-center">
+                <div className="display-inline-block hover-border padding-10">
+                    <Link to={path} className="text-no-decor text-m text-light margin-t-zero">
+                        {title}
+                    </Link>
+                </div>
+            </div>
             <Link to={path}>
                 <Img sizes={sizes} />
             </Link>
             <p>
                 {excerpt}
-                <Link to={path} className="text-no-decor text-bold link-hover-colour">
-                    &nbsp;Read More
+                <Link to={path} className="margin-l-5 text-no-decor text-bold hover-bottom-border">
+                    Read More
                 </Link>
             </p>
         </div>

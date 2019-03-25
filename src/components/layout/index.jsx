@@ -13,9 +13,7 @@ const Layout = ({ children, isPost }) => {
             <div>
                 <Header theme={theme} setTheme={setTheme} />
                 <div className={"width-90 margin-l-r-auto max-width-" + width}>
-                    <div className="display-inline-block">
-                        {children}
-                    </div>
+                    {children}
                 </div>
             </div>
             <Footer />

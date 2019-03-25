@@ -21,10 +21,24 @@
     padding: 5px 35px;
 }
 
+.mail-button:hover {
+    background-color: $dark-color;
+    color: $light-color !important;
+    border-color: $dark-color;
+    transition: 350ms; 
+}
+
 body.dark .mail-text {
     color: #000000 !important;
 }
 
 body.dark .mail-input {
     color: $light-color;
+}
+
+body.dark .mail-button:hover {
+    background-color: $light-color;
+    color: $dark-text-color !important;
+    border-color: $light-color;
+    transition: 350ms; 
 }

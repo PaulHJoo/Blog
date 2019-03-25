@@ -23,8 +23,8 @@ const BlogTemplate = ({ data }) => {
 
     return (
         <Layout isPost={true}>
-            <div className="display-inline-block float-right">
-                <p className="text-l margin-t-zero">
+            <div>
+                <p className="text-l text-light margin-t-zero">
                     {frontmatter.title}
                 </p>
                 <p>{frontmatter.displayDate}</p>
