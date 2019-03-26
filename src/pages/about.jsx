@@ -11,7 +11,6 @@ import EmailIcon from "../components/icons/email-icon";
 
 const About = ({ data }) => {
     const { file } = data;
-    console.log(file);
     return (
         <Layout isPost={false}>
             <p className="text-m text-light margin-t-zero">

@@ -10,10 +10,10 @@ import RssSquareIcon from "../icons/rss-square-icon";
 const Footer = () => {
 
     return (
-        <footer>
+        <footer className="width-90 margin-l-r-auto">
             <div className="footer-overline"></div>
             <div className="footer height-150">
-                <div className="width-fit margin-l-r-auto">
+                <div className="text-center">
                     <GitHubSquareIcon href="https://github.com/PaulHJoo" size="medium" />
                     <LinkedInSquareIcon href="https://www.linkedin.com/in/devpauljoo/" size="medium" />
                     <TwitterSquareIcon href="https://twitter.com/PaulHJoo" size="medium" />

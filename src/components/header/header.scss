@@ -4,6 +4,10 @@
     margin-bottom: 50px;
 }
 
+.mobile-header-font {
+    font-size: 2.5em;
+}
+
 .item-margin {
     margin-right: 50px;
 }
@@ -58,5 +62,9 @@
 
     .nav-mobile-list {
         display: block;
+    }
+
+    .mobile-header-font {
+        font-size: 2em;
     }
 }

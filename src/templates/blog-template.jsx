@@ -10,6 +10,7 @@ import "./blog-template.scss";
 import "../style/colour.scss";
 import "../style/cursor.scss";
 import "../style/opacity.scss";
+import "../style/overflow.scss";
 import "../style/padding-margins.scss";
 import "../style/position.scss";
 import "../style/prismjs-light.scss";
@@ -24,7 +25,7 @@ const BlogTemplate = ({ data }) => {
     return (
         <Layout isPost={true}>
             <div>
-                <p className="text-l text-light margin-t-zero">
+                <p className="text-m text-light margin-t-zero">
                     {frontmatter.title}
                 </p>
                 <p>{frontmatter.displayDate}</p>

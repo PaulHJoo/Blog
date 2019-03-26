@@ -10,10 +10,13 @@ const Posts = ({ data }) => {
 
     const postList = edges.map(({ node }) => {
         const { frontmatter } = node;
+
         return (
             <div key={node.id} className="margin-b-10">
-                <Img className="thumbnail display-inline-block" sizes={frontmatter.featureImage.childImageSharp.sizes} />
-                <div className="display-inline-block title-parent">
+                <Link to={frontmatter.path}>
+                    <Img className="thumbnail display-inline-block" sizes={frontmatter.featureImage.childImageSharp.sizes} />
+                </Link>
+                <div className="display-inline-block title-parent overflow-hidden">
                     <Link to={frontmatter.path} className="text-s text-no-decor margin-zero title-child hover-border padding-10">
                         {frontmatter.title}
                     </Link>

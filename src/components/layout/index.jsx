@@ -12,7 +12,7 @@ const Layout = ({ children, isPost }) => {
         <div>
             <div>
                 <Header theme={theme} setTheme={setTheme} />
-                <div className={"width-90 margin-l-r-auto max-width-" + width}>
+                <div className={"layout-width margin-l-r-auto max-width-" + width}>
                     {children}
                 </div>
             </div>

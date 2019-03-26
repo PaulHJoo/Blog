@@ -11,6 +11,7 @@ import "./index.scss";
 import "../style/colour.scss";
 import "../style/cursor.scss";
 import "../style/opacity.scss";
+import "../style/overflow.scss";
 import "../style/padding-margins.scss";
 import "../style/position.scss";
 import "../style/prismjs-light.scss";

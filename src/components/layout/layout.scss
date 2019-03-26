@@ -1,5 +1,9 @@
 @import "../../style/media-query.scss";
 
+.layout-width {
+    width: 90%;
+}
+
 // .children-width {
 //     width: 100%;
 // }
@@ -12,7 +16,10 @@
 //     display: inline-block;
 // }
 
-@media (max-width: $desktop-breakpoint) {
+@media (max-width: $small-mobile-breakpoint) {
+    .layout-width {
+        width: 95%;
+    }
     // .children-width {
     //     width: 100%;
     // }

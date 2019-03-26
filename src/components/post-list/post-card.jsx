@@ -2,12 +2,14 @@ import React from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 
+import "./post-list.scss";
+
 const PostCard = ({ frontmatter }) => {
     const { excerpt, title, path, featureImage } = frontmatter;
     const { sizes } = featureImage.childImageSharp;
     return (
         <div className="margin-b-50">
-            <div className="margin-b-20 text-center">
+            <div className="margin-b-10 text-center">
                 <div className="display-inline-block hover-border padding-10">
                     <Link to={path} className="text-no-decor text-m text-light margin-t-zero">
                         {title}
