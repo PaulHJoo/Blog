@@ -9,10 +9,10 @@ const MailSubscriber = () => {
             <p className="margin-zero padding-t-10">
                 Join for email updates.
             </p>
-            <input className="mail-input text-center width-100 padding-zero margin-b-15" placeholder="Email Address" type="text" />
-            <a className="mail-button text-s">
+            <input className="mail-input text-center width-100 padding-zero" placeholder="Email Address" type="text" />
+            <p className="mail-button text-s">
                 Subscribe
-            </a>
+            </p>
         </div>
     );
 }

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Header from "../header";
-import ThemeSlider from "../theme-slider";
 
 import "./layout.scss";
 import Footer from "../footer";

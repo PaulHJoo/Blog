@@ -13,9 +13,9 @@ const MobileHeader = ({ theme, setTheme }) => {
             </Link>
             <div className="padding-t-10">
                 <div className="align-center text-center">
-                    <a className="mobile-header-font text-center text-light hover-border padding-10 letter-spacing-3 display-inline-block" onClick={() => setShowMobileNav(!showMobileNav)}>
+                    <p className="mobile-header-font text-center text-light hover-border margin-zero padding-10 letter-spacing-3 display-inline-block cursor-pointer " onClick={() => setShowMobileNav(!showMobileNav)}>
                         MENU
-                    </a>
+                    </p>
                 </div>
                 <ul className={"nav-mobile-list text-center " + showMobileNavClass}>
                     <li className="padding-10 padding-t-15">

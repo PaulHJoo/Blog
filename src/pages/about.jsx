@@ -71,7 +71,7 @@ const About = ({ data }) => {
                 <div className="display-inline-block">
                     <SquareIcon href="" size="small" />
                 </div>
-                <a className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
+                <a href="www.google.com"className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
                     Profile
                 </a>
             </div>
