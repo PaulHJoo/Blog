@@ -50,15 +50,11 @@ const SEO = ({ description, lang, meta, keywords, title }) => {
                 name: `twitter:description`,
                 content: metaDescription,
               },
+              {
+                name: `keywords`,
+                content: keywords,
+              },
             ]
-              .concat(
-                keywords.length > 0
-                  ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
-                  : []
-              )
               .concat(meta)}
           />
         )
@@ -77,7 +73,7 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
+  keywords: PropTypes.string,
   title: PropTypes.string.isRequired,
 }
 

@@ -26,7 +26,9 @@ const Posts = ({ data }) => {
     });
 
     return (
-        <Layout isPost={false}>
+        <Layout
+            isPost={false}
+            title="Posts">
             <p className="text-m text-light margin-t-zero">
                 Posts
             </p>

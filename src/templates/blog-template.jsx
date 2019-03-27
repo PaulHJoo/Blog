@@ -23,7 +23,11 @@ const BlogTemplate = ({ data }) => {
     const { frontmatter, html } = data.markdownRemark;
 
     return (
-        <Layout isPost={true}>
+        <Layout
+            isPost={true}
+            title={frontmatter.title}
+            description={frontmatter.excerpt}
+            keywords={"lorem, ipsum"}>
             <div>
                 <p className="text-m text-light margin-t-zero">
                     {frontmatter.title}
@@ -48,6 +52,8 @@ export const blogQuery = graphql`
                 path
                 displayDate
                 title
+                excerpt
+                keywords
             }
         }
     }

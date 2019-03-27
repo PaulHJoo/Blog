@@ -6,6 +6,7 @@ displayDate: "February 19, 2019"
 title: "Title for Post Two"
 featureImage: "./post-two-image.jpg"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lectus tincidunt, aliquam est at, molestie nibh. Pellentesque molestie sapien mattis lectus tristique, sit amet finibus sapien vulputate. Mauris condimentum erat id leo elementum placerat. Cras volutpat libero at ultrices suscipit. In sodales, dolor eget laoreet venenatis, turpis risus pellentesque ligula, non interdum elit velit eu leo. In sed nibh porta felis sodales aliquam eu eget diam."
+keywords: "lorem, ipsum"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lectus tincidunt, aliquam est at, molestie nibh. Pellentesque molestie sapien mattis lectus tristique, sit amet finibus sapien vulputate. Mauris condimentum erat id leo elementum placerat. Cras volutpat libero at ultrices suscipit. In sodales, dolor eget laoreet venenatis, turpis risus pellentesque ligula, non interdum elit velit eu leo. In sed nibh porta felis sodales aliquam eu eget diam. Nam sem metus, ultricies vel mi nec, vulputate ultricies dolor. Mauris non porta lacus, in vulputate diam. Duis tempor ipsum vel mauris auctor, nec suscipit nunc dictum. Phasellus vel augue augue.

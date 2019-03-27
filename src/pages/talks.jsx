@@ -7,7 +7,9 @@ import "./talks.scss";
 const Talks = () => {
 
     return (
-        <Layout>
+        <Layout 
+            isPost={false}
+            title="Talks">
             <p className="text-m text-light margin-t-zero">
                 Upcoming Talks
             </p>

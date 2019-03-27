@@ -24,7 +24,9 @@ const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
 
   return (
-    <Layout isPost={false}>
+    <Layout 
+      isPost={false}
+      title="Paul H.J">
       <div className="display-inline-block content-width">
         <PostList edges={edges} />
       </div>

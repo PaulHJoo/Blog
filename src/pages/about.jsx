@@ -12,7 +12,9 @@ import EmailIcon from "../components/icons/email-icon";
 const About = ({ data }) => {
     const { file } = data;
     return (
-        <Layout isPost={false}>
+        <Layout
+            isPost={false}
+            title="About">
             <p className="text-m text-light margin-t-zero">
                 About
             </p>
