@@ -23,7 +23,7 @@ const DesktopHeader = ({ theme, setTheme }) => {
                     </Link>
                 </div>
             </div>
-            <div className="margin-l-6 padding-t-15">
+            <div className="padding-t-15">
                 <ThemeSlider theme={theme} setTheme={setTheme} />
             </div>
         </div>

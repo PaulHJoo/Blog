@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "gatsby";
 import Layout from "../components/layout";
 
+import "./talks.scss";
+
 const Talks = () => {
 
     return (
@@ -9,7 +11,7 @@ const Talks = () => {
             <p className="text-m text-light margin-t-zero">
                 Upcoming Talks
             </p>
-            <div className="margin-l-50 margin-b-50">
+            <div className="talk-list">
                 <Link to="/" className="text-s text-light text-no-decor link-hover-colour">
                     Lorem ipsum dolor sit amet
                 </Link>
@@ -17,7 +19,7 @@ const Talks = () => {
             <p className="text-m text-light margin-t-zero">
                 Past Talks
             </p>
-            <div className="margin-l-50 margin-b-50">
+            <div className="talk-list">
                 <Link to="/" className="text-s text-light text-no-decor link-hover-colour">
                     Lorem ipsum dolor sit amet
                 </Link>

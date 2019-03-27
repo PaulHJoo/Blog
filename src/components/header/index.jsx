@@ -5,7 +5,7 @@ import MobileHeader from "./mobile-header";
 
 const Header = ({ theme, setTheme }) => {
     return (
-        <header className="header width-91 max-width-1440 margin-l-r-auto padding-t-50">
+        <header className="width-91 max-width-1440 margin-l-r-auto padding-t-50">
             <div className="nav-desktop">
                 <DesktopHeader theme={theme} setTheme={setTheme} />
             </div>

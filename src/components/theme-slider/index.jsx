@@ -20,10 +20,10 @@ const ThemeSlider = ({ theme, setTheme }) => {
 
     return (
         <div>
-            <p onClick={() => SetTheme("light", theme, setTheme)} className={"letter-spacing-3 display-inline-block margin-zero margin-r-15 cursor-pointer " + lightSelectedFont }>
+            <p onClick={() => SetTheme("light", theme, setTheme)} className={"letter-spacing-3 display-inline-block margin-zero cursor-pointer hover-border padding-5 " + lightSelectedFont }>
                 LIGHT
             </p>
-            <p onClick={() => SetTheme("dark", theme, setTheme)} className={"letter-spacing-3 display-inline-block margin-zero cursor-pointer " + darkSelectedFont } >
+            <p onClick={() => SetTheme("dark", theme, setTheme)} className={"letter-spacing-3 display-inline-block margin-zero cursor-pointer hover-border padding-5 " + darkSelectedFont } >
                 DARK
             </p>
         </div>

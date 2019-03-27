@@ -1,9 +1,5 @@
 @import "../../style/media-query.scss";
 
-.header {
-    margin-bottom: 50px;
-}
-
 .mobile-header-font {
     font-size: 2.5em;
 }
@@ -48,10 +44,6 @@
 }
 
 @media (max-width: $mobile-breakpoint) {
-    .header {
-        margin-bottom: 25px;
-    }
-
     .nav-desktop {
         display: none;
     }
