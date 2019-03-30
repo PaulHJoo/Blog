@@ -4,6 +4,7 @@ import "./mail-subscriber.scss";
 
 const MailSubscriber = () => {
     const [email, setEmail] = useState("");
+    const [emailStatus, setEmailStatus] = useState("");
     return (
         // <div className="mail-subscriber width-300 height-150 margin-l-r-auto text-center">
         //     <p className="margin-zero padding-t-10">
@@ -15,29 +16,48 @@ const MailSubscriber = () => {
         //     </p>
         // </div>
         <div className="mail-subscriber width-300 height-150 margin-l-r-auto text-center">
-            <form action="https://gmail.us20.list-manage.com/subscribe/post?u=c62f52a2675eb21b0f9d31f4b&amp;id=e4a4b6be84" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" noValidate>
-                <p className="margin-zero padding-t-10">
-                    Join for email updates.
+            <p className="margin-zero padding-t-10">
+                Join for email updates.
                 </p>
-                <input className="mail-input text-center width-100 padding-zero" value={email} onChange={e => setEmail(e.target.value)} type="email" name="EMAIL" placeholder="Email Address" required />
-                <div className="bot-sign" aria-hidden="true">
-                    <input type="text" name="b_c62f52a2675eb21b0f9d31f4b_e4a4b6be84" tabIndex="-1"/>
-                </div>
-                <div onClick={() => SubscribeToList(email)} className="mail-button text-s">
-                    Subscribe
-                </div>
-            </form>
-    </div>
+            <input className="mail-input text-center width-100 padding-zero" value={email} onChange={e => setEmail(e.target.value)} name="EMAIL" placeholder="Email Address" required />
+            <div className="bot-sign" aria-hidden="true">
+                <input type="text" name="b_c62f52a2675eb21b0f9d31f4b_e4a4b6be84" tabIndex="-1" />
+            </div>
+            <p onClick={() => SubscribeToList(email, setEmailStatus)} className="mail-button text-s">
+                Subscribe
+            </p>
+            <p className="margin-t-10">
+                {emailStatus}
+            </p>
+        </div>
     );
 }
 
-const SubscribeToList = (email) => {
-    fetch(`https://paulhjmailfunction.azurewebsites.net/api/MailFunction?code=ddqxs8RkhakxFOxJr4LjkV8G9gIEe6jq9R1STx3mXGrTXN1Nb3Y3Ag==&email=${email}`)
-        .then(function(response) {
-            console.log(response);
+const SubscribeToList = (email, setEmailStatus) => {
+    if (!email.includes("@" && ".")) {
+        setEmailStatus("Please enter a valid email address.");
+        return;
+    }
+
+    var splitEmail = email.split('@');
+    if (splitEmail[0].length === 0 || splitEmail[1].length === 0) {
+        setEmailStatus("Please enter a valid email address.");
+        return;
+    }
+
+    fetch(`https://paulhjmailfunction.azurewebsites.net/api/MailFunction?code=ddqxs8RkhakxFOxJr4LjkV8G9gIEe6jq9R1STx3mXGrTXN1Nb3Y3Ag==&email=${email}`, {
+        method: "POST",
+        cors: "cors"
+    })
+        .then(function (response) {
+            if (response.status === 200) {
+                setEmailStatus("Confirmation email has been sent.")
+            } else {
+                setEmailStatus("Something went wrong. Please try again.");
+            }
         })
-        .catch(function(err) {
-            console.log(err);
+        .catch(function (err) {
+            setEmailStatus("Something went wrong. Please try again.");
         });
 }
 
