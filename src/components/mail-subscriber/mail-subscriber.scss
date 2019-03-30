@@ -4,6 +4,11 @@
     // background-color: #e0e0e0;
 }
 
+.bot-sign {
+    position: absolute;
+    left: -5000px;
+}
+
 .mail-input {
     background-color: transparent;
     color: $dark-text-color;
@@ -20,6 +25,12 @@
     border-width: 2px;
     font-size: 1.5em;
     padding: 5px 35px;
+}
+
+.mail-button-text {
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 .mail-button:hover {
