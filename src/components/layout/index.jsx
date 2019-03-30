@@ -11,7 +11,6 @@ const Layout = ({ children, isPost, title, description, keywords }) => {
     return (
         <div>
             <SEO 
-                lang="en"
                 title={title}
                 description={description}
                 keywords={keywords}/>
