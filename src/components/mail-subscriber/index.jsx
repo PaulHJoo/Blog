@@ -45,7 +45,7 @@ const SubscribeToList = (email, setEmailStatus) => {
         return;
     }
 
-    fetch(`https://paulhjmailfunction.azurewebsites.net/api/MailFunction?code=ddqxs8RkhakxFOxJr4LjkV8G9gIEe6jq9R1STx3mXGrTXN1Nb3Y3Ag==&email=${email}`, {
+    fetch(`https://paulhjmailfunction.azurewebsites.net/api/MailFunction?email=${email}`, {
         method: "POST",
         cors: "cors"
     })
