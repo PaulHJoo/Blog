@@ -8,15 +8,22 @@ const SEO = ({ description, lang, meta, keywords, title }) => {
     <StaticQuery
       query={detailsQuery}
       render={data => {
+        var titleTemplate = `%s | ${data.site.siteMetadata.title}`;
+        if (!title) {
+          title = data.site.siteMetadata.title;
+          titleTemplate = `%s`;
+        }
+
         const metaDescription =
-          description || data.site.siteMetadata.description
+          description || data.site.siteMetadata.description;
+
         return (
           <Helmet
             htmlAttributes={{
               lang,
             }}
             title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            titleTemplate={titleTemplate}
             meta={[
               {
                 name: `description`,

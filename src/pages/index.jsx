@@ -25,8 +25,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout 
-      isPost={false}
-      title="Paul H.J">
+      isPost={false}>
       <div className="display-inline-block content-width">
         <PostList edges={edges} />
       </div>

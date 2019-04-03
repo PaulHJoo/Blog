@@ -52,12 +52,14 @@ const SubscribeToList = (email, setEmailStatus) => {
         .then(function (response) {
             if (response.status === 200) {
                 setEmailStatus("Confirmation email has been sent.")
+                console.log(response.json());
             } else {
                 setEmailStatus("Something went wrong. Please try again.");
             }
         })
         .catch(function (err) {
             setEmailStatus("Something went wrong. Please try again.");
+            console.log(err);
         });
 }
 
