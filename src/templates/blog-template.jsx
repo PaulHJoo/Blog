@@ -26,7 +26,7 @@ const BlogTemplate = ({ data }) => {
             isPost={true}
             title={frontmatter.title}
             description={frontmatter.excerpt}
-            keywords={"lorem, ipsum"}>
+            keywords={frontmatter.keywords}>
             <div>
                 <p className="text-m text-light margin-t-zero">
                     {frontmatter.title}

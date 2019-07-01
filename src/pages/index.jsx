@@ -24,7 +24,8 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout 
-      isPost={false}>
+      isPost={false}
+      keywords={"technology, blog"}>
       <div className="display-inline-block">
         <PostList edges={edges} />
       </div>
