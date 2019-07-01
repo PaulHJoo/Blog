@@ -18,9 +18,6 @@ const DesktopHeader = ({ theme, setTheme }) => {
                     <Link to="/about" className="item-margin text-sm text-no-decor letter-spacing-3 hover-border padding-10 text-light">
                         ABOUT
                     </Link>
-                    <Link to="/talks" className="text-sm text-no-decor letter-spacing-3 hover-border padding-10 text-light">
-                        TALKS
-                    </Link>
                 </div>
             </div>
             <div className="padding-t-15">

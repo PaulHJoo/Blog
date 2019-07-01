@@ -28,11 +28,6 @@ const MobileHeader = ({ theme, setTheme }) => {
                             ABOUT
                         </Link>
                     </li>
-                    <li className="padding-10 padding-b-20">
-                        <Link to="/talks" className="text-sm text-no-decor text-light letter-spacing-3 hover-border padding-10">
-                            TALKS
-                        </Link>
-                    </li>
                 </ul>
                 <div className="padding-t-10 text-center">
                     <ThemeSlider theme={theme} setTheme={setTheme} />

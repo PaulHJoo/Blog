@@ -4,7 +4,6 @@ import "normalize.css";
 
 import Layout from "../components/layout";
 import PostList from "../components/post-list";
-import MailSubscriber from "../components/mail-subscriber";
 
 import "./index.scss";
 
@@ -26,11 +25,10 @@ const IndexPage = ({ data }) => {
   return (
     <Layout 
       isPost={false}>
-      <div className="display-inline-block content-width">
+      <div className="display-inline-block">
         <PostList edges={edges} />
       </div>
       <div className="mail-div">
-        <MailSubscriber />
       </div>
     </Layout>
   );

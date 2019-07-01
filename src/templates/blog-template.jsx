@@ -4,7 +4,6 @@ import "normalize.css";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
-import Comments from "../components/comments";
 import "./blog-template.scss";
 
 import "../style/colour.scss";
@@ -37,7 +36,6 @@ const BlogTemplate = ({ data }) => {
                 <div>
                     <div dangerouslySetInnerHTML={{ __html: html }} />
                 </div>
-                <Comments frontmatter={frontmatter} />
             </div>
         </Layout>
     );
