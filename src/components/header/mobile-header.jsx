@@ -23,7 +23,7 @@ const MobileHeader = ({ theme, setTheme }) => {
                             POSTS
                         </Link>
                     </li>
-                    <li className="padding-10">
+                    <li className="padding-10 padding-b-20">
                         <Link to="/about" className="text-sm text-no-decor text-light letter-spacing-3 hover-border padding-10">
                             ABOUT
                         </Link>

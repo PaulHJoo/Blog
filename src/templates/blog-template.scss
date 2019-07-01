@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "NotoSans";
+    src: url("../fonts/Noto-Sans/NotoSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "NotoSans-Bold";
+    src: url("../fonts/Noto-Sans/NotoSans-Bold.ttf");
+}
+
+.content-text p {
+    font-family: "NotoSans", sans-serif;
+    line-height: 1.5;
+    color: #363636 !important;
+}

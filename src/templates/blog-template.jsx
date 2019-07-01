@@ -34,7 +34,9 @@ const BlogTemplate = ({ data }) => {
                 <p>{frontmatter.displayDate}</p>
 
                 <div>
-                    <div dangerouslySetInnerHTML={{ __html: html }} />
+                    <div 
+                    className="content-text"
+                    dangerouslySetInnerHTML={{ __html: html }} />
                 </div>
             </div>
         </Layout>
