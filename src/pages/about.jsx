@@ -31,7 +31,7 @@ const About = ({ data }) => {
                     —
             </p>
                 <p>
-                    As all software engineers do, I enjoy programming. <br />
+                    As software engineers do, I enjoy programming. <br />
                     It gets you engaged, you solve problems, you can see Hagrid calling you a wizard in the corner of your eye as you type. It's fun. <br />
                     However, technology doesn't exist in a vacuum. It exists in the real world where it has to solve real problems. <br />
                     And when you're talking about technology to a peer, technical or not, you'll often run into either of two problems.
