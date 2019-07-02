@@ -15,6 +15,16 @@
     src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
 }
 
+@font-face {
+    font-family: "NotoSans";
+    src: url("../fonts/Noto-Sans/NotoSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "NotoSans-Bold";
+    src: url("../fonts/Noto-Sans/NotoSans-Bold.ttf");
+}
+
 body * {
     font-family: "Montserrat", sans-serif
 }
@@ -57,6 +67,12 @@ body * {
 
 .letter-spacing-3 {
     letter-spacing: 0.3em;
+}
+
+.reading-text p {
+    font-family: "NotoSans", sans-serif;
+    line-height: 1.5;
+    color: #363636 !important;
 }
 
 @media (max-width: $small-mobile-breakpoint) {

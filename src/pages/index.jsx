@@ -29,8 +29,6 @@ const IndexPage = ({ data }) => {
       <div className="display-inline-block">
         <PostList edges={edges} />
       </div>
-      <div className="mail-div">
-      </div>
     </Layout>
   );
 };
