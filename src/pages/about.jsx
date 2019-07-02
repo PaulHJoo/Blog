@@ -19,32 +19,35 @@ const About = ({ data }) => {
                 About
             </p>
             <Img className="width-300 margin-l-r-auto" sizes={file.childImageSharp.sizes} />
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                In ut ipsum ut arcu sodales volutpat.
-                Aenean a risus sit amet nulla efficitur ornare.
-                Phasellus sit amet nisi non diam efficitur varius.
-                Mauris sit amet est nec magna rhoncus pharetra.
-                Suspendisse porttitor odio magna, a pellentesque nisl porta id.
-                Mauris nec sagittis libero, et faucibus elit.
-                In hac habitasse platea dictumst. 
+            <div className="reading-text">
+                <p>
+                    Hello! I'm Paul.
             </p>
-            <p>
-                Etiam ut massa tristique, mattis diam in, ullamcorper justo.
-                Donec quis orci faucibus elit sodales iaculis.
-                In finibus blandit iaculis.
-                Pellentesque posuere condimentum odio vehicula rhoncus.
-                Donec vulputate lectus vitae augue bibendum, id tempus eros elementum.
-                Donec vel lacus condimentum, vulputate mi pretium, maximus erat.
-                Fusce ullamcorper sem sit amet lorem interdum hendrerit.
-                Nunc at condimentum enim, ut faucibus elit.
-                Fusce lorem ante, rhoncus at mi non, pulvinar dignissim nibh.
-                Suspendisse sit amet finibus urna, a faucibus sem.
-                Vivamus rhoncus ante ultrices ex congue, quis feugiat orci vulputate.
-                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                Aenean consectetur enim vitae enim tempus, eget faucibus ligula semper.
-                Nulla velit mi, finibus id faucibus id, scelerisque eget libero.
+                <p>
+                    A software engineer specializing in full-stack web development. <br />
+                    Currently, I'm working in Sydney, AU as a Consultant.
             </p>
+                <p>
+                    —
+            </p>
+                <p>
+                    As all software engineers do, I enjoy programming. <br />
+                    It gets you engaged, you solve problems, you can see Hagrid calling you a wizard in the corner of your eye as you type. It's fun. <br />
+                    However, technology doesn't exist in a vacuum. It exists in the real world where it has to solve real problems. <br />
+                    And when you're talking about technology to a peer, technical or not, you'll often run into either of two problems.
+            </p>
+                <p>
+                    - As you explain, you realise they don't understand anything you're saying. <br />
+                    - As you explain, you realise you don't understand anything you're saying.
+            </p>
+                <p>
+                    Nobody is to blame here. Technology is a sandcastle built atop another sandcastle on a mountain - in outer space. <br />
+                    Abstraction as a concept was created so that we don't have to conquer every level of this nightmare clown castle just to get started. <br />
+                    That being said, I like exploring this nightmare clown castle. <br />
+                    So, on this blog I'd like to take you with me to explore this castle - to understand it better. <br />
+                    Hopefully afterwards, we can explain things in a way where we don't confuse the other party and ourselves.
+            </p>
+            </div>
             <div className="padding-b-10">
                 <div className="display-inline-block">
                     <TwitterIcon href="https://twitter.com/PaulHJoo" size="small" />
@@ -73,7 +76,7 @@ const About = ({ data }) => {
                 <div className="display-inline-block">
                     <SquareIcon href="" size="small" />
                 </div>
-                <a href="www.google.com"className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
+                <a href="www.google.com" className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
                     Profile
                 </a>
             </div>

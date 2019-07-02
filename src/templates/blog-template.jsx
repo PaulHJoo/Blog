@@ -35,7 +35,7 @@ const BlogTemplate = ({ data }) => {
 
                 <div>
                     <div 
-                    className="content-text"
+                    className="reading-text"
                     dangerouslySetInnerHTML={{ __html: html }} />
                 </div>
             </div>
