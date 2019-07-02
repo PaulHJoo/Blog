@@ -48,7 +48,6 @@ export const blogQuery = graphql`
         markdownRemark(frontmatter: { path: { eq: $path } }) {
             html
             frontmatter {
-                identifier
                 path
                 displayDate
                 title

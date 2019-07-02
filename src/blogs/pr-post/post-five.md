@@ -1,5 +1,4 @@
 ---
-identifier: "post6"
 path: "/pr-post"
 date: "2019-07-01"
 displayDate: "July 1st, 2019"
