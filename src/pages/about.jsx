@@ -21,7 +21,7 @@ const About = ({ data }) => {
             <Img className="width-300 margin-l-r-auto" sizes={file.childImageSharp.sizes} />
             <div className="reading-text">
                 <p>
-                    Hello! I'm Paul.
+                    Hi! I'm Paul.
             </p>
                 <p>
                     A software engineer specializing in full-stack web development. <br />
@@ -42,7 +42,7 @@ const About = ({ data }) => {
             </p>
                 <p>
                     Nobody is to blame here. Technology is a sandcastle built atop another sandcastle on a mountain - in outer space. <br />
-                    Abstraction as a concept was created so that we don't have to conquer every level of this nightmare clown castle just to get started. <br />
+                    Abstraction as a concept was created so that we wouldn't have to conquer every level of this nightmare clown castle just to get started. <br />
                     That being said, I like exploring this nightmare clown castle. <br />
                     So, on this blog I'd like to take you with me to explore this castle - to understand it better. <br />
                     Hopefully afterwards, we can explain things in a way where we don't confuse the other party and ourselves.
