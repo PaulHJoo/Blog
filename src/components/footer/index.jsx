@@ -4,8 +4,10 @@ import GitHubSquareIcon from "../icons/github-square-icon";
 import LinkedInSquareIcon from "../icons/linkedin-square-icon";
 import TwitterSquareIcon from "../icons/twitter-square-icon";
 import SquareIcon from "../icons/square-icon";
-import "./footer.scss";
 import RssSquareIcon from "../icons/rss-square-icon";
+import Link from "../../links/links";
+
+import "./footer.scss";
 
 const Footer = () => {
 
@@ -14,11 +16,11 @@ const Footer = () => {
             <div className="footer-overline"></div>
             <div className="footer height-150">
                 <div className="text-center">
-                    <GitHubSquareIcon href="https://github.com/PaulHJoo" size="medium" />
-                    <LinkedInSquareIcon href="https://www.linkedin.com/in/paulhjoo/" size="medium" />
-                    <TwitterSquareIcon href="https://twitter.com/PaulHJoo" size="medium" />
+                    <GitHubSquareIcon href={Link.Github} size="medium" />
+                    <LinkedInSquareIcon href={Link.LinkedIn} size="medium" />
+                    <TwitterSquareIcon href={Link.Twitter} size="medium" />
                     <RssSquareIcon href="/rss.xml" size="medium" />
-                    <SquareIcon href="" size="medium" />
+                    <SquareIcon href={Link.Profile} size="medium" />
                 </div>
                 <p className="footer-text text-center">
                     Copyright &copy; 2019 by Paul H. Joo. <br />

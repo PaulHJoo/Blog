@@ -8,6 +8,7 @@ import GitHubIcon from "../components/icons/github-icon";
 import LinkedInIcon from "../components/icons/linkedin-icon";
 import SquareIcon from "../components/icons/square-icon";
 import EmailIcon from "../components/icons/email-icon";
+import Link from "../links/links";
 
 const About = ({ data }) => {
     const { file } = data;
@@ -50,33 +51,33 @@ const About = ({ data }) => {
             </div>
             <div className="padding-b-10">
                 <div className="display-inline-block">
-                    <TwitterIcon href="https://twitter.com/PaulHJoo" size="small" />
+                    <TwitterIcon href={Link.Twitter} size="small" />
                 </div>
-                <a href="https://twitter.com/PaulHJoo" className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
+                <a href={Link.Twitter} className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
                     Twitter - @PaulHJoo
                 </a>
             </div>
             <div className="padding-b-10">
                 <div className="display-inline-block">
-                    <GitHubIcon href="https://github.com/PaulHJoo" size="small" />
+                    <GitHubIcon href={Link.Github} size="small" />
                 </div>
-                <a href="https://github.com/PaulHJoo" className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
+                <a href={Link.Github} className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
                     GitHub - PaulHJoo
                 </a>
             </div>
             <div className="padding-b-10">
                 <div className="display-inline-block">
-                    <LinkedInIcon href="https://www.linkedin.com/in/devpauljoo/" size="small" />
+                    <LinkedInIcon href={Link.LinkedIn} size="small" />
                 </div>
-                <a href="https://www.linkedin.com/in/paulhjoo/" className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
+                <a href={Link.LinkedIn} className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
                     LinkedIn
                 </a>
             </div>
             <div className="padding-b-10">
                 <div className="display-inline-block">
-                    <SquareIcon href="" size="small" />
+                    <SquareIcon href={Link.Profile} size="small" />
                 </div>
-                <a href="www.google.com" className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
+                <a href={Link.Profile} className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
                     Profile
                 </a>
             </div>
