@@ -35,21 +35,6 @@ module.exports = ({ graphql, actions }) => {
                         component: blogTemplate,
                     });
                 });
-
-                //Pagination
-                // const postsPerPage = 2;
-                // const numberOfPages = Math.ceil(posts.length / postsPerPage);
-
-                // Array.from({ length: numberOfPages }).forEach((_, i) => {
-                //     createPage({
-                //         path: i === 0 ? `/posts` : `/posts/${i + 1}`,
-                //         component: listOfPostsTemplate,
-                //         context: {
-                //             limit: postsPerPage,
-                //             skip: i * postsPerPage
-                //         }
-                //     });
-                // });
             })
         )
     })
