@@ -1,11 +1,12 @@
 ---
 path: "/internet-protocol"
-date: "2019-07-02"
-displayDate: "July 2nd, 2019"
+date: "2019-07-03"
+displayDate: "July 3rd, 2019"
 title: "Internet Protocol"
 featureImage: "./sushi.png"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lectus tincidunt, aliquam est at, molestie nibh. Pellentesque molestie sapien mattis lectus tristique, sit amet finibus sapien vulputate. Mauris condimentum erat id leo elementum placerat. Cras volutpat libero at ultrices suscipit. In sodales, dolor eget laoreet venenatis, turpis risus pellentesque ligula, non interdum elit velit eu leo. In sed nibh porta felis sodales aliquam eu eget diam."
-keywords: "key, word"
+excerpt: "At the centre of our technological wonderland is the personal computer. While our devices are indeed very powerful, just like humans they gain a huge power boost when allowed to communicate and work together. And the biggest, baddest communication group of them all is the Internet. That being said, whenever I hear or read a sentence with the words IP Address, Subnets, Autonomous Systems or the like, my eyes glaze over and the only thoughts going through my head are “Oh, the people who know what they’re doing are talking”.
+So, let’s dive in and learn how the devices that give us superpowers like to talk to each other."
+keywords: "internet protocol, osi model, subnetmask, networks, cidr, routing"
 ---
 
 What are you doing on your computer? <br />

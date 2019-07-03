@@ -19,12 +19,14 @@ const PostCard = ({ frontmatter }) => {
             <Link to={path}>
                 <Img sizes={sizes} />
             </Link>
-            <p>
-                {excerpt}
-                <Link to={path} className="margin-l-5 text-no-decor text-bold hover-bottom-border">
-                    Read More
+            <div className="reading-text">
+                <p>
+                    {excerpt}
+                    <Link to={path} className="margin-l-5 text-no-decor text-bold hover-bottom-border">
+                        Read More
                 </Link>
-            </p>
+                </p>
+            </div>
         </div>
     );
 }
