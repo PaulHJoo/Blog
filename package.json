@@ -1,7 +1,7 @@
 {
-  "name": "blog-template",
+  "name": "paulhj-blog",
   "private": true,
-  "description": "blog template using Gatsby",
+  "description": "Blog about technology by PaulHJ.",
   "version": "0.1.0",
   "author": "PaulHJoo",
   "dependencies": {

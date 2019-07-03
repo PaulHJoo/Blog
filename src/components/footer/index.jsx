@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="footer height-150">
                 <div className="text-center">
                     <GitHubSquareIcon href="https://github.com/PaulHJoo" size="medium" />
-                    <LinkedInSquareIcon href="https://www.linkedin.com/in/devpauljoo/" size="medium" />
+                    <LinkedInSquareIcon href="https://www.linkedin.com/in/paulhjoo/" size="medium" />
                     <TwitterSquareIcon href="https://twitter.com/PaulHJoo" size="medium" />
                     <RssSquareIcon href="/rss.xml" size="medium" />
                     <SquareIcon href="" size="medium" />

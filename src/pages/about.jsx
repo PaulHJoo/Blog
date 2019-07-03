@@ -68,7 +68,7 @@ const About = ({ data }) => {
                 <div className="display-inline-block">
                     <LinkedInIcon href="https://www.linkedin.com/in/devpauljoo/" size="small" />
                 </div>
-                <a href="https://www.linkedin.com/in/devpauljoo/" className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
+                <a href="https://www.linkedin.com/in/paulhjoo/" className="display-inline-block margin-l-10 margin-zero top-negative-02em position-relative hover-bottom-border text-no-decor">
                     LinkedIn
                 </a>
             </div>
