@@ -25,23 +25,24 @@ The technology world is a lot like an onion (and Shrek), it’s all layers; howe
 
 Which is why the OSI (Open Systems Interconnection) Model exists. The OSI Model takes the technology onion and organizes the layers into seven parts, each with its own responsibility and each layer talking to the one above and below it.
 
-It’s important to note that the OSI Model is conceptual model not a specification; the structure of Internet doesn’t actually follow the OSI Model exactly, however, it provides a good mental framework for where each piece of technology sits.
+It’s important to note that the OSI Model is a conceptual model not a specification; the structure of Internet doesn’t actually follow the OSI Model exactly, however, it provides a good mental framework for where each piece of technology sits.
 For the scope of our exploration, we’ll only be concerning ourselves with the layers one to four.
 ![OSI Model](./images/osi.png "OSI Model")
-We’ll get to exploring each layer as they become relevant, so for now we’ll look at the bottom of the model for the most self-explanatory layer, the physical layer.
+We’ll get to exploring each layer as they become relevant, so for now we’ll look at the bottom of the model for the most self-explanatory layer, the Physical layer.
 
 For devices to communicate they must have a medium for that data to flow. Whatever physical medium that allows data to flow between two devices is part of the physical layer - such as a cable.
 
-So, for the Internet to work there has to be a physical medium that links together devices around the globe - which is exactly what we’ve done. You can actually see these cables if you search up “Submarine Cable Map” and it blows my mind every time I see it (Seriously, if you’ve been on a flight you know that even traveling at ludicrous speeds it still takes a very long even for what seems like a short distance. Now try imagining for the entire journey there’s a massive cable being thrown out and laid across the ocean. Woah dude).
+For the Internet to work there has to be a physical medium that links together devices around the globe - which is exactly what we’ve done. You can actually see these cables if you search up “Submarine Cable Map” and it blows my mind every time I see it (Seriously, if you’ve been on a flight you know that even traveling at ludicrous speeds it still takes a very long even for what seems like a short distance. Now try imagining for the entire journey there’s a massive cable being thrown out and laid across the ocean. Woah dude).
 
 ##Internet Protocol
-Now that we’ve established a physical network where data can be transmitted, how does that data get from one device to another in a manner that both devices can understand each other?
+Now that we’ve established a physical network where data can be transmitted, how does that data get from one device to another in a manner that both devices can understand?
 
 For that we need to look at a piece of the puzzle that literally has the word “Internet” in it - The Internet Protocol.
 With that said, the part of the phrase “Internet Protocol” that we’re going to visit is the “Protocol” part. While the word does sound like something serious people would say seriously in serious situations, the word itself is quite loose.
 
 A protocol (in computing terms) is just an agreement on how information should be presented when communicating. On our journey across the Internet lands we’ll be talking to a menagerie of devices; imagine how difficult it would be if all those different devices spoke different languages and dialects. The Internet Protocol is our saviour here, it defines how all those different devices should speak if they want to be understood by each other.
 It’s like a zoo where all the animals speak English - except less horrifying but equally magical.
+
 ![Zoo](./images/zoo.png "Zoo")
 
 ##Internet Protocol Address
@@ -85,7 +86,7 @@ If we don’t fix this problem, there won’t be any more room on the Internet, 
 
 Since we didn’t want to drown on land, we solved this issue in many ways. Since this post is about how devices communicate on the Internet, we’ll be focusing on a solution relating to networks, however, it’s worth mentioning one of the solutions as you’ll be seeing it around and it may cause some confusion, IPv6.
 
-The IP addresses we’ve been discussing have all been IPv4; IPv6 addresses look like this 2001:0db8:0000:0042:0000:8a2e:0370:7334 and they have 128-bits, which means they have 2<sup>128</sup> unique addresses (put that into a calculator for fun times - we won’t be running out anytime soon). IPv6 isn’t simply an “if there’s no room let’s just make more room” solution; it has its differences and nuances however that’s a story for another time.
+The IP addresses we’ve been discussing have all been IPv4; IPv6 addresses look like this 2001:0db8:0000:0042:0000:8a2e:0370:7334 and they have 128-bits, which means they have 2<sup>128</sup> unique addresses (put that into a calculator for fun times - we won’t be running out anytime soon). IPv6 isn’t simply an “if there’s no room let’s just make more room” solution; it has its differences and nuances, however, that’s a story for another time.
 
 ##Networks
 To explain how the network related solution works we have to explain what a network and subnetwork is. A network is a collection of IP addresses (devices) and a subnetwork is a subset of that network. Put another way, a subnetwork is what occurs when you start splitting the network into smaller groups. However, this begs the question, how do we split these addresses into groups? How can we identify if one address belongs to one subnet or another?
@@ -99,9 +100,9 @@ A real-world example of the first point is a brand of phone and the name of that
 
 The same thing occurs in the world of IP Addresses; the first point is addressed by splitting the IP Address into two parts, the Network and Host Address.
 ![Network and Host Address](./images/network-host-address.png "Network and Host Address")
-As the names suggest, the Network Address indicates what subnetwork the IP Address belongs to while the Host Address identifies the device on that subnetwork.
+As the names suggest, the Network Address indicates what network the IP Address belongs to, while the Host Address identifies the device on that network.
 
-Using the above example, it would be intuitive to say that the Network Address is 192.16.168.1 and the Host Address 74, however, this isn’t the case as the separation between the two is in binary. If that’s the case how do we get the Network Address from an IP Address so we can start grouping them together?
+Using the above example, it would be intuitive to say that the Network Address is 192.16.168.1 and the Host Address 74, however, that isn’t the case as the separation between the two is in binary. If that’s the case how do we get the Network Address from an IP Address so we can start grouping them together?
 
 This brings us to our second point, and the operation involves a lot of numbers and looks very complex, however, it’s actually quite simple.
 The first piece of the puzzle is something called a Subnet Mask and it looks like this.
@@ -167,9 +168,9 @@ Here you see the problem. Your class C subnet only supports 254 devices, so in o
 Obviously the solution here would be to have more fine-grained control over the subnetwork size. Enter stage left, CIDR (Classless Inter-Domain Routing).
 
 As the name suggest, CIDR does away with classes and allows for an IP Address to be separated on any bit.
-Taking our previous example, the class C subnet had 24 bits allocated to the Network Address and upgrading to class B meant allocating 16 bits. That’s an 8 eight jump which is why there were so many wasted IP Addresses.
+Taking our previous example, the class C subnet had 24 bits allocated to the Network Address and upgrading to class B meant allocating 16 bits. That’s an 8 bit jump which is why there were so many wasted IP Addresses.
 
-Using CIDR you would be able to accommodate more devices by allocating 23 bits to the Network Address, which would allow for 512 (2<sup>9</sup> but really 510) devices. Much more fined grained and efficient use of IP Addresses.
+Using CIDR, you would be able to accommodate more devices by allocating 23 bits to the Network Address, which would allow for 512 (2<sup>9</sup> but really 510) devices. Much more fined grained and efficient use of IP Addresses.
 
 To indicate how many bits you’re allocating to the Network Address we use something called CIDR notation. Simply take the IP Address and add a slash with the number of bits for the Network Address, e.g. 172.16.81.0/24.
 
@@ -244,7 +245,7 @@ Suppose that our network looks like this and a packet wants to get from 172.156.
 
 ![Routing in Network](./images/tree-2.png "Routing in Network")
 
-This is basically how routing across the Internet works; apply the Subnet Mask to get the Network Address, match with the destination address in the routing table entry and pass the packet on that entry’s next hop. However, everything we’ve called about so far is inside of something called an Autonomous System (AS).
+This is basically how routing across the Internet works; apply the Subnet Mask to get the Network Address, match with the destination address in the routing table entry and pass the packet on that entry’s next hop. However, everything we’ve talked about so far is inside of something called an Autonomous System (AS).
 
 ##Autonomous System
 An AS is basically a set of subnetworks under the administration of one entity (as such an Internet Service Provider). Routing within an AS uses internal protocols such as Interior Border Gateway Protocol (iBGP) while routing between Autonomous Systems (ASes? The alternative without the “e” isn’t an option) is done with external protocols, such as the Border Gateway Protocol (BGP), but the essentials of how a packet is passed along is the same.
@@ -277,7 +278,7 @@ The other big Transport layer protocol we have to talk about is the User Datagra
 
 Calls, games, streams and whatever time sensitive communication can be a nightmare over TCP. Handshakes, confirmation, checks and balances - this all takes time. The technical term being an increase in latency; and if you’ve ever played an online game with high latency, then need I say more.
 
-So, there are times when we value speed more than correctness and this is exactly what UDP is for. UDP doesn’t start things off like gentleman TCP, it doesn’t have the time for that, so a connection with the receiver is never made, making it connectionless.
+So, there are times when we value speed more than correctness and this is exactly what UDP is for. UDP doesn’t start things off like gentleman TCP, it doesn’t have the time for that. So, a connection with the receiver is never made, making it connectionless.
 
 The data to be sent is split into datagrams (the PDU of UDP) and sent immediately. Unlike TCP, the packets can come in an incorrect order and be lost. As such, TCP is for when you need reliability while UDP is for speed.
 
