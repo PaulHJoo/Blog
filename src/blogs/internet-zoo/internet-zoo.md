@@ -289,4 +289,4 @@ We’ve arrived at the end of our journey together. After visiting myriads of ni
 
 So, the next time someone says those words, IP Address, Subnets, Autonomous Systems or the like, you can stay in that conversation knowing you’ve worked from the ground up to understand them.
 
-The modern Internet is a feat of human engineering that manifests our desire as human to be connected with one another; so, the next time the Internet goes down, don’t just drown like a fish on land. Drown like a fish on land with dignity because I still want my cat videos.
+The modern Internet is a feat of human engineering that manifests our desire as humans to be connected with one another; so, the next time the Internet goes down, don’t just drown like a fish on land. Drown like a fish on land with dignity because I still want my cat videos.
