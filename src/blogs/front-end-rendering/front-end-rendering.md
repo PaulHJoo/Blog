@@ -1,8 +1,8 @@
 ---
-path: "/front-end-rendering"
+path: "/client-server-static-rendering"
 date: "2020-12-11"
 displayDate: "December 11th, 2020"
-title: "Front-End Rendering Techniques"
+title: "Client, Server and Static Rendering"
 featureImage: "./images/Pipeline.png"
 excerpt: "How did this web page get built and sent over to you?
 If you aren’t a seasoned front-end developer, this question might seem trivial or, dare I say, unimportant. However, there are vast differences between various methods of getting a web page to a client, each with their own pros and cons from the big to the little.”.
