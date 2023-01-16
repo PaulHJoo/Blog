@@ -2,12 +2,12 @@
 path: "/async-javascript"
 date: "2023-13-01"
 displayDate: "January 13th, 2023"
-title: "JavaScript is Single Threaded, how can it Async?"
+title: "JavaScript is Single-threaded, how can it Async?"
 featureImage: "./images/Pipeline.png"
 excerpt: "JavaScript is weird.
 I’m sure you don’t need me to list the eccentricities and little quirks of JavaScript. From equality checks, truthy and falsy and even writing entire sentences using brackets - JavaScript is a funny language.
-And one detail of JavaScript that’s often easy to forget about is that it's single threaded.
-It’s easy to forget about since we litter our code with `async await`s and it’s not until we sit down and think about it - if JavaScript is single threaded, how can it handle asynchronous code?"
+And one detail of JavaScript that’s often easy to forget about is that it's single-threaded.
+It’s easy to forget about since we litter our code with `async await`s and it’s not until we sit down and think about it - if JavaScript is single-threaded, how can it handle asynchronous code?"
 keywords: "javascript, asynchronous, parallel, callbacks, promises, generator functions, async await"
 ---
 
@@ -29,11 +29,11 @@ I’m sure you don’t need me to list the eccentricities and little quirks of J
 
 The above prints out incredible. Incredible.
 
-And one detail of JavaScript that’s often easy to forget about is that it's single threaded.
-It’s easy to forget about since we litter our code with `async await`s and it’s not until we sit down and think about it - if JavaScript is single threaded, how can it handle asynchronous code?
+And one detail of JavaScript that’s often easy to forget about is that it's single-threaded.
+It’s easy to forget about since we litter our code with `async await`s and it’s not until we sit down and think about it - if JavaScript is single-threaded, how can it handle asynchronous code?
 
 # The Environment the Language runs on
-The first step to uncovering JavaScript’s secrets is to understand that the question “JavaScript is single threaded, how can it do async” is like saying “English utilises a 26 letter alphabet, how can it eat pie?”.
+The first step to uncovering JavaScript’s secrets is to understand that the question “JavaScript is single-threaded, how can it do async” is like saying “English utilises a 26 letter alphabet, how can it eat pie?”.
 
 English is a language, the person speaking English is the thing doing the pie eating.
 
@@ -109,13 +109,13 @@ While the two previous concepts explain how being single-threaded doesn't stop J
 
 And that's the difference between CPU and I/O bound tasks.
 
-CPU bound operations are computationally intensive and require the time on the CPU. So for our JavaScript program, it is a chunk of code that runs on the single thread and nothing else can run until it finishes.
+CPU bound operations are computationally intensive and require the time on the CPU. So for our JavaScript program, it is a chunk of code that runs on the single-thread and nothing else can run until it finishes.
 
 On the other hand, I/O bound operations are not computationally intensive and mainly require waiting (the response from a network request). So it's code that runs (sends a network request), waits, and when ready (network request returns a response) the operation finishes.
 
 Since CPU bound operations require time on the CPU, multi-threaded languages can pass work off to another thread so the main thread doesn’t hang.
 
-For a single threaded language like JavaScript, doing the these operations means nothing else can run until it's finished. If you’ve ever done heavy computation (manipulation of a large data set) on your site and seen it freeze, this is what’s happening. And remember, due to JavaScript’s Run-to-Completion behaviour, another function can’t interrupt the CPU bound task to get time on the main thread.
+For a single-threaded language like JavaScript, doing the these operations means nothing else can run until it's finished. If you’ve ever done heavy computation (manipulation of a large data set) on your site and seen it freeze, this is what’s happening. And remember, due to JavaScript’s Run-to-Completion behaviour, another function can’t interrupt the CPU bound task to get time on the main thread.
 
 Side note: Traditionally for this reason, JavaScript isn’t used when you know you have to do large CPU heavy operations, however, recently Worker Threads have been added to Node (Hosting Environment) that spawns more JavaScript Engine instances to handle CPU bound operations out of the main thread.
 
@@ -441,7 +441,7 @@ With this the generator function implementation takes the lead again for asynchr
 
 Remember that we can pass parameters into `next()` so `requestResource` passes `response` with `next(response)` which passes it to the `response` variable in `main`.
 
-Look at that `main` function! We’re getting a result from an asynchronous operation and passing it to our next function while the whole thing looks synchronous - in single threaded JavaScript land!
+Look at that `main` function! We’re getting a result from an asynchronous operation and passing it to our next function while the whole thing looks synchronous - in single-threaded JavaScript land!
 
 However, our above implementation lost the trustability we got when we used Promises. So the final piece of the puzzle is to combine Generator Functions with Promises.
 
@@ -529,6 +529,6 @@ And that's async in JavaScript!
 
 From the syntax that makes writing asynchronous code easier and prettier, to how that code gets scheduled to run on the hosting environment.
 
-Even though JavaScript is singled threaded, lots of details behind the scenes make life for us JavaScript developers a lot easier when it comes to writing asynchronous code.
+Even though JavaScript is single-threaded, lots of details behind the scenes make life for us JavaScript developers a lot easier when it comes to writing asynchronous code.
 
 Just make sure it's not a huge CPU bound operation you've scheduled in.
