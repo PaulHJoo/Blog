@@ -1,11 +1,11 @@
 ---
 path: "/async-javascript"
-date: "2023-13-01"
-displayDate: "January 13th, 2023"
+date: "2023-18-01"
+displayDate: "January 18th, 2023"
 title: "JavaScript is Single-threaded, how can it Async?"
 featureImage: "./images/Threads.png"
 excerpt: "JavaScript is weird.
-I’m sure you don’t need me to list the eccentricities and little quirks of JavaScript. From equality checks, truthy and falsy and even writing entire sentences using brackets - JavaScript is a funny language.
+I’m sure you don’t need me to list the eccentricities and little quirks of JavaScript. From equality checks, truthy and falsy and even writing entire sentences using brackets.
 And one detail of JavaScript that’s often easy to forget about is that it's single-threaded.
 It’s easy to forget about since we litter our code with `async await`s and it’s not until we sit down and think about it - if JavaScript is single-threaded, how can it handle asynchronous code?"
 keywords: "javascript, asynchronous, parallel, callbacks, promises, generator functions, async await"
@@ -32,7 +32,9 @@ The above prints out incredible. Incredible.
 And one detail of JavaScript that’s often easy to forget about is that it's single-threaded.
 It’s easy to forget about since we litter our code with `async await`s and it’s not until we sit down and think about it - if JavaScript is single-threaded, how can it handle asynchronous code?
 
-**PROPOSITION ON WHAT TO GET OUT OF THIS, WHY WE NEED THE CONCEPTS**
+Let's dive into the whats and hows of asynchronous JavaScript! In the first section we'll explore what is deciding when to run your JavaScript code. In the second, we'll look under the hood of the lovely syntax `async await` to see exactly how it works behind the scenes.
+
+By the end of this post we'll hopefully understand what's going on with asynchronous code and with our new perspective, gain a greater appreciation for all the orchestration required for something seemingly as simple as `setTimeout`.
 
 # The Environment the Language runs on
 The first step to uncovering JavaScript’s secrets is to understand that the question “JavaScript is single-threaded, how can it do async” is like saying “English utilises a 26 letter alphabet, how can it eat pie?”.
@@ -95,7 +97,7 @@ The above example is asynchronous code, the function `B()` will only be executed
 
 Remembering that your code is chunked and scheduled by the hosting environment:
 - First `A()` is added to the queue
-- The hosting environment sees that `B()` should only be added to the queue after 1000 milliseconds, so `B()` is not added.
+- The hosting environment sees that `B()` should only be executed after 1000 milliseconds, so `B()` is not added.
 - `C()` is added to the queue.
 - After 1000 milliseconds, `B()` is added to the queue.
 
@@ -108,10 +110,10 @@ But wait a minute, can’t we interrupt whatever code is currently running and r
 
 So if `C()` is particularly large and will takes a whole minute to finish, then `B()` will just have to wait until `C()` finishes - this behaviour is called Run-to-Completion.
 
-# Types of Works [CPU and I/O Bound]
-**WHY WE'RE TALKING ABOUT TYPES OF WORK**
+With that, we can conclude the first section of exploring asynchronous JavaScript. Our hosting environment is the thing that schedules chunks of our code to run at differing moments in time to achieve async; so let's take a quick detour before heading into the nitty gritty concepts that enable us to write asynchronous JavaScript code, and explore the types of work that can be asynchronous.
 
-While the two previous concepts explain how being single-threaded doesn't stop JavaScript from being asynchronous, there is one more that helps clear up why some operations seem to freeze our programs while others don’t.
+# Types of Works [CPU and I/O Bound]
+While crafting absolute masterpieces through the medium of JavaScript, you may have realised that some asynchronous operations seem to freeze your magnum opus while others don't.
 
 And that's the difference between CPU and I/O bound tasks.
 
@@ -125,16 +127,16 @@ For a single-threaded language like JavaScript, doing the these operations means
 
 ![Multi and Single Threaded](./images/Threads.png "Multi and Single Threaded")
 
-Side note: Traditionally for this reason, JavaScript isn’t used when you know you have to do large CPU heavy operations, however, recently Worker Threads have been added to Node (Hosting Environment) that spawns more JavaScript Engine instances to handle CPU bound operations out of the main thread.
+Side note: Traditionally, for this reason JavaScript isn’t used when you know you have to do large CPU heavy operations, however, recently Worker Threads have been added to Node (Hosting Environment) that spawns more JavaScript Engine instances to handle CPU bound operations out of the main thread.
 
-Now we know how JavaScript can be Asynchronous, but hang on a minute. I write `async await` all the time and sometimes in the middle of my functions.
-And if I’ve understood this right, my function will suspend execution on the `await`, let other chunks of code run and then resume execution when the asynchronous operation has completed - which means that JavaScript’s Run-to-Completion policy is being completely broken!
+All this talk about being unable to interrupt runing tasks may have you thinking, how is it that I'm able to write `async await` in the middle of my functions?
+If I’ve understood this right, my function will suspend execution on the `await`, let other chunks of code run and then resume execution when the asynchronous operation has completed - which means that JavaScript’s Run-to-Completion policy is being completely broken!
 
-And you’re completely correct. But to understand how we’re breaking Run-to-Completion to write asynchronous code that looks like synchronous code, we have to take a deep dive into how we write asynchronous code in JavaScript.
+And you’re completely correct - but to understand how we’re breaking Run-to-Completion to write asynchronous code that looks like synchronous code, we'll have to cover a few JavaScript concepts.
+
+Which brings us to our second section - starting with!
 
 # Callbacks
-**WHY GOING INTO JAVASCRIPT CONCEPTS**
-
 Callbacks are the backbone of asynchronous JavaScript and it's simply a function that runs when the asynchronous operation has completed.
 For example:
 ```
