@@ -3,7 +3,7 @@ path: "/async-javascript"
 date: "2023-13-01"
 displayDate: "January 13th, 2023"
 title: "JavaScript is Single-threaded, how can it Async?"
-featureImage: "./images/Pipeline.png"
+featureImage: "./images/Threads.png"
 excerpt: "JavaScript is weird.
 I’m sure you don’t need me to list the eccentricities and little quirks of JavaScript. From equality checks, truthy and falsy and even writing entire sentences using brackets - JavaScript is a funny language.
 And one detail of JavaScript that’s often easy to forget about is that it's single-threaded.
@@ -31,6 +31,8 @@ The above prints out incredible. Incredible.
 
 And one detail of JavaScript that’s often easy to forget about is that it's single-threaded.
 It’s easy to forget about since we litter our code with `async await`s and it’s not until we sit down and think about it - if JavaScript is single-threaded, how can it handle asynchronous code?
+
+**PROPOSITION ON WHAT TO GET OUT OF THIS, WHY WE NEED THE CONCEPTS**
 
 # The Environment the Language runs on
 The first step to uncovering JavaScript’s secrets is to understand that the question “JavaScript is single-threaded, how can it do async” is like saying “English utilises a 26 letter alphabet, how can it eat pie?”.
@@ -74,6 +76,8 @@ Asynchronous is when two pieces of code run at different times.
 
 Parallel is when two pieces of code run at the same time.
 
+![Async and parallel](./images/Async-parallel.png "Async and parallel")
+
 It’s a big difference, and if we inspect the Event Loop we can see that it is Asynchronous but not Parallel.
 At no point is the Event Loop scheduling the JavaScript engine to run two pieces of code at the same time , however, the Event Loop is extremely Asynchronous. Your code is broken up into chunks that are scheduled to run at different times on the JavaScript Engine.
 
@@ -105,6 +109,8 @@ But wait a minute, can’t we interrupt whatever code is currently running and r
 So if `C()` is particularly large and will takes a whole minute to finish, then `B()` will just have to wait until `C()` finishes - this behaviour is called Run-to-Completion.
 
 # Types of Works [CPU and I/O Bound]
+**WHY WE'RE TALKING ABOUT TYPES OF WORK**
+
 While the two previous concepts explain how being single-threaded doesn't stop JavaScript from being asynchronous, there is one more that helps clear up why some operations seem to freeze our programs while others don’t.
 
 And that's the difference between CPU and I/O bound tasks.
@@ -117,6 +123,8 @@ Since CPU bound operations require time on the CPU, multi-threaded languages can
 
 For a single-threaded language like JavaScript, doing the these operations means nothing else can run until it's finished. If you’ve ever done heavy computation (manipulation of a large data set) on your site and seen it freeze, this is what’s happening. And remember, due to JavaScript’s Run-to-Completion behaviour, another function can’t interrupt the CPU bound task to get time on the main thread.
 
+![Multi and Single Threaded](./images/Threads.png "Multi and Single Threaded")
+
 Side note: Traditionally for this reason, JavaScript isn’t used when you know you have to do large CPU heavy operations, however, recently Worker Threads have been added to Node (Hosting Environment) that spawns more JavaScript Engine instances to handle CPU bound operations out of the main thread.
 
 Now we know how JavaScript can be Asynchronous, but hang on a minute. I write `async await` all the time and sometimes in the middle of my functions.
@@ -125,6 +133,8 @@ And if I’ve understood this right, my function will suspend execution on the `
 And you’re completely correct. But to understand how we’re breaking Run-to-Completion to write asynchronous code that looks like synchronous code, we have to take a deep dive into how we write asynchronous code in JavaScript.
 
 # Callbacks
+**WHY GOING INTO JAVASCRIPT CONCEPTS**
+
 Callbacks are the backbone of asynchronous JavaScript and it's simply a function that runs when the asynchronous operation has completed.
 For example:
 ```
@@ -326,7 +336,7 @@ const generatorFunction = createGenerator();
 console.log(generatorFunction.next().value); // 1
 console.log(generatorFunction.next().value);  // 2
 ```
-The `*` next to `*createGenerator()` indicates that this is a generator function. When we call `createGenerator()` we are constructing a Generator object where we can call `next()` to iterate through the function.
+The `*` next to `*createGenerator()` indicates that this is a Generator Function. When we call `createGenerator()` we are constructing a Generator object where we can call `next()` to iterate through the function.
 
 The first `next()` call starts the function and will continue until it hits `yield`. `yield`s can return a value just like `return` and in this case returns `1` - which we can access with `.value`.
 
@@ -337,7 +347,7 @@ We can stop a running function and control when to resume it!
 
 Remember, JavaScript’s Run-to-Completion behaviour means that a function can’t be interrupted once started, but here we have a function where we can suspend/stop the function from running with the `yield` expression. By breaking Run-to-Completion we’re able to open the door to make our asynchronous code look like synchronous code - but more on that later.
 
-And since generator functions are still functions, they can be passed parameters and provide a return value.
+And since Generator Functions are still functions, they can be passed parameters and provide a return value.
 ```
 function *createGenerator(initialValue) {
     const num = initialValue + (yield);
@@ -350,9 +360,9 @@ console.log(generatorFunction.next(15).value); // 25
 ```
 When calling the `createGenerator` we pass in the initial value of `10`, and to start the Generator Function we call `next()` which will run the function until `(yield)` - at this point `value` will return `undefined` as we aren’t returning anything.
 
-The next call passes in `15` which will replace the paused `(yield)` expression with `15` resulting in `num` becoming `25`. The generator function then continues until the next `yield` expression - which this time does return the value `num`.
+The next call passes in `15` which will replace the paused `(yield)` expression with `15` resulting in `num` becoming `25`. The Generator Function then continues until the next `yield` expression - which this time does return the value `num`.
 
-Now that we understand how generator functions work, we can start merging them with asynchronous code.
+Now that we understand how Generator Functions work, we can start merging them with asynchronous code.
 
 Let's first create a Callback based implementation:
 ```
@@ -387,12 +397,12 @@ const generatorFunction = main();
 generatorFunction.next();
 ```
 There’s a lot going on here so let’s unpack this step-by-step.
-1) Our `main` function has now become a generator function.
-2) We create our generator function by calling `main()` and start it up by calling `next()`.
+1) Our `main` function has now become a Generator Function.
+2) We create our Generator Function by calling `main()` and start it up by calling `next()`.
 3) `main` will run until it hits the first `yield` expression and runs `asynchronousOperation()` then suspends (`asynchronousOperation` doesn’t return anything so `value` will be `undefined`).
 4) `asynchronousOperation` has been called so `setTimeout` has been called.
 5) After 3000 milliseconds, `setTimeout` calls `next()`.
-6) This resumes the generator function from where it left off previously, logging `Async operation complete`.
+6) This resumes the Generator Function from where it left off previously, logging `Async operation complete`.
 
 This may seem more complex but look at the difference of the two `main` functions:
 ```
@@ -408,7 +418,7 @@ function* main() {
 }
 ```
 
-Both are dealing with asynchronous operations but the generator function implementation looks like synchronous code!
+Both are dealing with asynchronous operations but the Generator Function implementation looks like synchronous code!
 
 To take it a step further, let's say that the asynchronous operation was requesting a resource.
 
@@ -425,7 +435,7 @@ function main() {
 main();
 ```
 
-Generator functions:
+Generator Functions:
 ```
 function asynchronousOperation() {
     networkRequest('…’', (response) => generatorFunction.next(response));
@@ -437,7 +447,7 @@ function* main() {
 const generatorFunction = main();
 generatorFunction.next();
 ```
-With this the generator function implementation takes the lead again for asynchronous code that looks like synchronous code.
+With this the Generator Function implementation takes the lead again for asynchronous code that looks like synchronous code.
 
 Remember that we can pass parameters into `next()` so `requestResource` passes `response` with `next(response)` which passes it to the `response` variable in `main`.
 
@@ -532,3 +542,5 @@ From the syntax that makes writing asynchronous code easier and prettier, to how
 Even though JavaScript is single-threaded, lots of details behind the scenes make life for us JavaScript developers a lot easier when it comes to writing asynchronous code.
 
 Just make sure it's not a huge CPU bound operation you've scheduled in.
+
+![Conclusion](./images/Conclusion.png "Conclusion")
