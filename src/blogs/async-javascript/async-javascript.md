@@ -7,7 +7,7 @@ featureImage: "./images/Threads.png"
 excerpt: "JavaScript is weird.
 I’m sure you don’t need me to list the eccentricities and little quirks of JavaScript. From equality checks, truthy and falsy and even writing entire sentences using brackets.
 And one detail of JavaScript that’s often easy to forget about is that it's single-threaded.
-It’s easy to forget about since we litter our code with `async await`s and it’s not until we sit down and think about it - if JavaScript is single-threaded, how can it handle asynchronous code?"
+It’s easy to forget about since we litter our code with async awaits and it’s not until we sit down and think about it - if JavaScript is single-threaded, how can it handle asynchronous code?"
 keywords: "javascript, asynchronous, parallel, callbacks, promises, generator functions, async await"
 ---
 
@@ -110,7 +110,7 @@ But wait a minute, can’t we interrupt whatever code is currently running and r
 
 So if `C()` is particularly large and will takes a whole minute to finish, then `B()` will just have to wait until `C()` finishes - this behaviour is called Run-to-Completion.
 
-With that, we can conclude the first section of exploring asynchronous JavaScript. Our hosting environment is the thing that schedules chunks of our code to run at differing moments in time to achieve async; so let's take a quick detour before heading into the nitty gritty concepts that enable us to write asynchronous JavaScript code, and explore the types of work that can be asynchronous.
+With that, we can conclude the first section of exploring asynchronous JavaScript. Our hosting environment is the thing that schedules chunks of code to run at differing moments in time to achieve async; so let's take a quick detour before heading into the nitty gritty concepts that enable us to write asynchronous JavaScript code, and explore the types of work that can be asynchronous.
 
 # Types of Works [CPU and I/O Bound]
 While crafting absolute masterpieces through the medium of JavaScript, you may have realised that some asynchronous operations seem to freeze your magnum opus while others don't.
