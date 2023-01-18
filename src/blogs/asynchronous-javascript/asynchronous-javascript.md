@@ -1,5 +1,5 @@
 ---
-path: "/async-javascript"
+path: "/asynchronous-javascript"
 date: "2023-18-01"
 displayDate: "January 18th, 2023"
 title: "JavaScript is Single-threaded, how can it Async?"
